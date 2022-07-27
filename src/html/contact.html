@@ -1,0 +1,61 @@
+<section class="contact">
+  <h2 class="visually-hidden">Section contact us</h2>
+  <div class="contact__image"></div>
+
+  <div class="contact__text-box content-box" id="contact">
+    <form
+      action="/"
+      name="callback_form"
+      method="post"
+      autocomplete="off"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      id="callback-form"
+    >
+      <h2
+        class="content-box__light-heading content-box__light-heading--no-indent"
+      >
+        Request Callback
+      </h2>
+      <!-- The `form-name` hidden field is required to support form submissions without JavaScript -->
+      <input type="hidden" name="form-name" value="callback_form" />
+      <p hidden>
+        <label>
+          Don’t fill this out:
+          <input name="bot-field" />
+        </label>
+      </p>
+      <div class="form-field">
+        <input
+          type="text"
+          aria-describedby="user-name-hint"
+          class="form-field__input"
+          name="name"
+          id="name"
+          required
+          minlength="2"
+          placeholder="Ivan"
+        />
+        <label for="name" class="form-field__label">Enter your name</label>
+      </div>
+
+      <div class="form-field form-field--indent">
+        <input
+          type="email"
+          aria-describedby="user-email-hint"
+          class="form-field__input"
+          name="email"
+          id="email"
+          required
+          placeholder="myemail@gmail.com"
+        />
+        <label for="email" class="form-field__label">Enter email*</label>
+        <span class="form-field__valid-message">This is a required field</span>
+      </div>
+
+      <button type="submit" class="btn btn__submit btn--green-box">
+        <span class="btn__submit--text">Send</span>
+      </button>
+    </form>
+  </div>
+</section>

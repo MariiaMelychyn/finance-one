@@ -1,0 +1,63 @@
+.form-field {
+  position: relative;
+  padding-top: 35px;
+
+  &--indent {
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    position: absolute;
+    left: 5px;
+    top: 45px;
+  }
+}
+
+.form-field__input {
+  outline: none;
+  border: none;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  line-height: 23px;
+  padding: 8px 5px;
+
+  &::placeholder {
+    visibility: hidden;
+  }
+}
+
+.form-field__valid-message {
+  @extend %base-font-line;
+  color: #ff0000;
+  padding-left: 24px;
+  opacity: 0;
+  visibility: hidden;
+
+  &::before {
+    @extend %base-kit-pseudo-elem;
+    top: 80px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background-image: url('../images/form/worning.svg');
+    @extend %bg-norepeat-center;
+    background-size: 100%;
+  }
+}
+
+.form-field__input:focus + .form-field__label,
+.form-field__input:not(:placeholder-shown):required:valid + .form-field__label,
+.form-field__input:not(:placeholder-shown):required:invalid
+  + .form-field__label {
+  top: 12px;
+  transition-duration: 0.3s;
+}
+
+input[type='email']:not(:placeholder-shown):required:invalid
+  ~ .form-field__valid-message {
+  transition-delay: 2s;
+  transition-duration: 1s;
+  opacity: 1;
+  visibility: visible;
+}

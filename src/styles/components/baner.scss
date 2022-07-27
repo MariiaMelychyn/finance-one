@@ -1,0 +1,52 @@
+.baner {
+  @extend %flex-column-center;
+  padding: 0 28px;
+  text-align: center;
+  margin-top: 24px;
+
+  &__heading {
+    font-weight: 300;
+    font-size: 52px;
+    line-height: 66px;
+    margin-bottom: 16px;
+  }
+
+  &__paragraph {
+    font-size: 22px;
+    line-height: 37px;
+    margin-bottom: 28px;
+  }
+
+  &--fake-header-mobile {
+    margin-top: calc(24px + 120px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .baner {
+    margin-top: 332px;
+
+    &__heading {
+      font-size: 55px;
+      margin-bottom: 25px;
+    }
+
+    &__paragraph {
+      margin-bottom: 30px;
+    }
+
+    &--fake-header-desktop {
+      margin-top: 402px;
+    }
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .baner {
+    margin-top: 225px;
+
+    &--fake-header-desktop {
+      margin-top: 295px;
+    }
+  }
+}

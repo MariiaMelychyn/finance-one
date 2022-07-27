@@ -1,0 +1,66 @@
+.contact {
+  width: 100%;
+  @extend %flex-column;
+  background: #f4f4f4;
+
+  &__text-box {
+    padding-top: 26px;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+}
+
+.contact__image {
+  width: 100%;
+  min-height: 220px;
+  background-size: cover;
+  @extend %bg-norepeat-center;
+
+  &--support-webp {
+    background-image: url('../images/home/contact.webp');
+  }
+
+  &--support-jpg {
+    background-image: url('../images/home/contact.jpg');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .contact__image {
+    &--support-webp {
+      background-image: url('../images/home/contact@2x.webp');
+    }
+
+    &--support-jpg {
+      background-image: url('../images/home/contact@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+
+    &__image {
+      width: 50%;
+    }
+
+    &__text-box {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .contact {
+    margin: 0 auto;
+
+    &__text-box {
+      padding-top: 78px;
+      padding-bottom: 82px;
+      max-width: 680px;
+    }
+  }
+}

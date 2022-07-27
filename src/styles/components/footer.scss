@@ -1,0 +1,23 @@
+.site-footer {
+  @extend %flex-column-center;
+  padding: 30px;
+  color: $white-color;
+  background-color: $dark-color;
+
+  &__copyright {
+    @extend %base-font;
+    @extend %base-font-line;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site-footer {
+    padding-bottom: 16px;
+
+    &__copyright {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}

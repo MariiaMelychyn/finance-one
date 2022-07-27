@@ -1,0 +1,74 @@
+.btn {
+  border-radius: 5px;
+  padding: 10px 30px;
+  cursor: pointer;
+  color: $white-color;
+
+  &__text {
+    @extend %base-font-line;
+  }
+
+  &__submit {
+    width: 100%;
+    &--text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.btn--green-box {
+  border: none;
+  background: $green-color;
+  position: relative;
+
+  &:hover {
+    transition: all 0.3s;
+    opacity: 0.9;
+  }
+}
+
+.btn--transparent {
+  background-color: transparent;
+  border: 1px solid $white-color;
+
+  &:hover {
+    transition: all 0.5s;
+    background-color: $white-color;
+    color: $green-color;
+  }
+}
+
+.content-box--blue-box .btn--transparent:hover {
+  transition: all 0.5s;
+  color: $blue-color;
+}
+
+.btn--with-icon {
+  padding-left: 44px;
+
+  &::before {
+    @extend %base-kit-pseudo-elem;
+    top: 17px;
+    left: 30px;
+    width: 8px;
+    height: 12px;
+    background-image: url('../images/icons/angle-right-solid.svg');
+    @extend %bg-norepeat-center;
+    background-size: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn__text {
+    font-size: 18px;
+  }
+  .btn--with-icon {
+    & .btn__text {
+      line-height: 28px;
+    }
+    &::before {
+      top: 19px;
+    }
+  }
+}

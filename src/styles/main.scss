@@ -1,0 +1,27 @@
+@import 'helpers/variables';
+@import 'helpers/placeholders';
+@import 'normalize';
+@import 'base';
+
+/* Components */
+
+@import 'components/main-screen';
+@import 'components/header';
+@import 'components/nav-list';
+@import 'components/baner';
+@import 'components/btn';
+@import 'components/about';
+@import 'components/content-box';
+@import 'components/features-list';
+@import 'components/individual-solution';
+@import 'components/cases';
+@import 'components/gallery';
+@import 'components/blog-post';
+@import 'components/team';
+@import 'components/team-list';
+@import 'components/icon-block';
+@import 'components/contact';
+@import 'components/form-fields';
+@import 'components/footer';
+@import 'components/social-icon';
+@import 'components/modal';

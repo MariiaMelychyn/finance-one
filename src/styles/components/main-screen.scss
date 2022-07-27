@@ -1,0 +1,52 @@
+.main-screen {
+  position: relative;
+  min-width: 320px;
+  min-height: 533px;
+  @extend %base-font;
+  color: $white-color;
+  background-position: center;
+  background-size: cover;
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  &--support-webp {
+    background-image: url('../images/home/showcase.webp');
+  }
+
+  &--support-jpg {
+    background-image: url('../images/home/showcase.jpg');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .main-screen {
+    &--support-webp {
+      background-image: url('../images/home/showcase@2x.webp');
+    }
+
+    &--support-jpg {
+      background-image: url('../images/home/showcase@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-screen {
+    height: 1024px;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .main-screen {
+    height: 768px;
+  }
+}

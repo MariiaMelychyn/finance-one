@@ -1,0 +1,50 @@
+.nav-list {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list__link {
+  display: block;
+  &::after {
+    @extend %base-kit-pseudo-elem;
+    top: 30px;
+    left: -4px;
+    background-color: transparent;
+    width: calc(100% + 8px);
+    height: 2px;
+  }
+}
+
+.nav-list li {
+  position: relative;
+  @extend %base-font-line;
+
+  &:hover .nav-list__link::after,
+  &:focus .nav-list__link::after,
+  &:active .nav-list__link::after {
+    transition: all 0.5s;
+    background-color: $green-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    width: 328px;
+
+    &__link {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &__link::after {
+      top: 34px;
+    }
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .nav-list {
+    width: 410px;
+  }
+}

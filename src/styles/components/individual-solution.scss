@@ -1,0 +1,65 @@
+.individual-solution {
+  width: 100%;
+  @extend %flex-column;
+
+  &__text-box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+  }
+}
+
+.individual-solution__image {
+  width: 100%;
+  min-height: 220px;
+  background-size: cover;
+  @extend %bg-norepeat-center;
+
+  &--support-webp {
+    background-image: url('../images/home/people.webp');
+  }
+
+  &--support-jpg {
+    background-image: url('../images/home/people.jpg');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .individual-solution__image {
+    &--support-webp {
+      background-image: url('../images/home/people@2x.webp');
+    }
+
+    &--support-jpg {
+      background-image: url('../images/home/people@2x.jpg');
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .individual-solution {
+    flex-direction: row;
+
+    &__image {
+      width: 50%;
+    }
+
+    &__text-box {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .individual-solution {
+    margin: 0 auto;
+
+    &__text-box {
+      padding-top: 84px;
+      padding-bottom: 84px;
+      max-width: 680px;
+    }
+  }
+}
